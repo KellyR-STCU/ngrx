@@ -9,14 +9,18 @@
             <h2>Counter: {{ model | async }}</h2>
         </md-card-content>
         <md-card-actions>
-            <button md-raised-button color="primary" title="Increment value" (click)="increment()">
-                <md-icon>add</md-icon>
-                <!-- Increment -->
-            </button>
-            <button md-raised-button color="warn" title="Decrement value" (click)="decrement()">
-                <md-icon>remove</md-icon>
-                <!-- Decrement -->
-            </button>
+            <md-toolbar>
+                <button md-raised-button color="primary" mdTooltip="Increment value" (click)="increment()">
+                    <md-icon>add</md-icon>
+                </button>
+                <button md-raised-button color="warn" mdTooltip="Decrement value" (click)="decrement()">
+                    <md-icon>remove</md-icon>
+                </button>
+                <span class="app-spacer"></span>
+                <button md-raised-button mdTooltip="Reset value" (click)="reset()">
+                    <md-icon>refresh</md-icon>
+                </button>
+            </md-toolbar>
         </md-card-actions>
     </md-card>
 </div>

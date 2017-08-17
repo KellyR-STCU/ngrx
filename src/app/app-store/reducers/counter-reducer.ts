@@ -30,6 +30,13 @@ export function reducer(state = initialState, action: CounterActions.All): State
             }
         }
 
+        case CounterActions.RESET: {
+            console.log('Reset action being handled');
+            return {
+                ...initialState
+            }
+        }
+
         case CounterActions.EVENT_FROM_EFFECT: {
             console.log('In the reducer');
             return {

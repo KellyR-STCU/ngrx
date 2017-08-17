@@ -9,20 +9,24 @@ export class MainService {
 
     constructor(private store: Store<fromRoot.State>) { }
 
-    public GetCounterValue(): Store<number> {
+    public getCounterValue(): Store<number> {
         return this.store.select(fromRoot.selectCounterValue)
     }
 
-    public Increment(): void {
+    public increment(): void {
         this.store.dispatch(new CounterActions.Increment());
     }
 
-    public IncrementBy(value: number): void {
+    public incrementBy(value: number): void {
         this.store.dispatch(new CounterActions.IncrementBy(value));
     }
 
-    public Decrement(): void {
+    public decrement(): void {
         this.store.dispatch(new CounterActions.Decrement());
+    }
+
+    public reset(): void {
+        this.store.dispatch(new CounterActions.Reset());
     }
 
     //event thing
