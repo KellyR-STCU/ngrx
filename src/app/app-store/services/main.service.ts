@@ -7,19 +7,23 @@ import * as fromRoot from '../reducers/reducers';
 @Injectable()
 export class MainService {
 
-  constructor(private store:Store<fromRoot.State>) { }
+    constructor(private store: Store<fromRoot.State>) { }
 
-  public GetCounterValue(): Store<number>{
-    return this.store.select(fromRoot.selectCounterValue)
-  }
+    public GetCounterValue(): Store<number> {
+        return this.store.select(fromRoot.selectCounterValue)
+    }
 
-  public Increment(): void {
-    this.store.dispatch(new CounterActions.Increment());
-  }
+    public Increment(): void {
+        this.store.dispatch(new CounterActions.Increment());
+    }
 
-  public IncrementBy(value: number): void {
-    this.store.dispatch(new CounterActions.IncrementBy(value));
-  }
+    public IncrementBy(value: number): void {
+        this.store.dispatch(new CounterActions.IncrementBy(value));
+    }
 
-  //event thing
+    public Decrement(): void {
+        this.store.dispatch(new CounterActions.Decrement());
+    }
+
+    //event thing
 }
