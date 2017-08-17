@@ -25,6 +25,7 @@ import { AppStoreModule } from './app-store/app-store.module';
         ngMaterialModules.MdButtonModule,
         ngMaterialModules.MdCardModule,
         ngMaterialModules.MdTooltipModule,
+        ngMaterialModules.MdInputModule,
         AppStoreModule
     ],
     providers: [],

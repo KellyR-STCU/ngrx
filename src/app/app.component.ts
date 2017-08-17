@@ -31,8 +31,8 @@ export class AppComponent {
         this.mainService.increment();
     }
 
-    public incrementBy(value: number): void {
-        this.mainService.incrementBy(value);
+    public incrementBy(value: string): void {
+        this.mainService.incrementBy(+value);
     }
 
     public decrement(): void {

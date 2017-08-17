@@ -10,15 +10,22 @@
         </md-card-content>
         <md-card-actions>
             <md-toolbar>
-                <button md-raised-button color="primary" mdTooltip="Increment value" (click)="increment()">
+                <button md-mini-fab color="primary" mdTooltip="Increment value" (click)="increment()">
                     <md-icon>add</md-icon>
                 </button>
-                <button md-raised-button color="warn" mdTooltip="Decrement value" (click)="decrement()">
+                <button md-mini-fab color="warn" class="decrement-button" mdTooltip="Decrement value" (click)="decrement()">
                     <md-icon>remove</md-icon>
                 </button>
-                <span class="app-spacer"></span>
-                <button md-raised-button mdTooltip="Reset value" (click)="reset()">
+                <button md-mini-fab class="reset-button" mdTooltip="Reset value" (click)="reset()">
                     <md-icon>refresh</md-icon>
+                </button>
+            </md-toolbar>
+            <md-toolbar>
+                <md-input-container>
+                    <input mdInput #incrementByRef placeholder="Increment by" type="text" />
+                </md-input-container>
+                <button md-mini-fab color="primary" mdTooltip="Increment by" (click)="incrementBy(incrementByRef.value); incrementByRef.value = '';">
+                    <md-icon>add</md-icon>
                 </button>
             </md-toolbar>
         </md-card-actions>
