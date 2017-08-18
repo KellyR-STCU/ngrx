@@ -1,29 +1,39 @@
 import { Action } from '@ngrx/store';
 //create entity: import { Book } from './book-model';
 
-export const INCREMENT:string = "INCREMENT";
-export const INCREMENT_BY:string = "INCREMENT_BY";
-export const EVENT_FROM_EFFECT:string = "EVENT_FROM_EFFECT";
+export const INCREMENT = 'INCREMENT';
+export const INCREMENT_BY = 'INCREMENT_BY';
+export const DECREMENT = 'DECREMENT';
+export const RESET = 'RESET';
+export const EVENT_FROM_EFFECT = 'EVENT_FROM_EFFECT';
 
 export class Increment implements Action {
-  readonly type = INCREMENT;
-
-   constructor(public payload?: any) {}
+    readonly type = INCREMENT;
 }
 
 export class IncrementBy implements Action {
     readonly type = INCREMENT_BY;
 
-    constructor(public payload: number) {}
+    constructor(public payload: number) { }
+}
+
+export class Decrement implements Action {
+    readonly type = DECREMENT;
+}
+
+export class Reset implements Action {
+    readonly type = RESET;
 }
 
 export class EventFromEffect implements Action {
-  readonly type = EVENT_FROM_EFFECT;
+    readonly type = EVENT_FROM_EFFECT;
 
-     constructor(public payload?: any) {}
+    constructor(public payload: any) { }
 }
 
-export type All
- = Increment
- | IncrementBy
- | EventFromEffect;
+export type Actions =
+    | Increment
+    | IncrementBy
+    | Decrement
+    | Reset
+    | EventFromEffect;

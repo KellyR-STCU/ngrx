@@ -1,0 +1,19 @@
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+}
+
+.app-content {
+    padding-top: 60px;
+}
+
+.decrement-button {
+    margin-left: 10px;
+}
+
+.reset-button {
+    margin-left: 25px;
+}
