@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 
 // 3rd party libs
-import * as ngMaterialModules from '@angular/material';
+import { MaterialModule } from '@angular/material';
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
@@ -20,12 +20,7 @@ import { AppStoreModule } from './app-store/app-store.module';
         BrowserAnimationsModule,
         HttpClientModule,
         HttpModule,
-        ngMaterialModules.MdToolbarModule,
-        ngMaterialModules.MdIconModule,
-        ngMaterialModules.MdButtonModule,
-        ngMaterialModules.MdCardModule,
-        ngMaterialModules.MdTooltipModule,
-        ngMaterialModules.MdInputModule,
+        MaterialModule,
         AppStoreModule
     ],
     providers: [],
